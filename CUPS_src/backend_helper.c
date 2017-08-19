@@ -502,8 +502,8 @@ const char *get_default(PrinterCUPS *p, char *option_name)
     /** first take care of special cases**/
     if (strcmp(option_name, CUPS_ORIENTATION) == 0)
         return get_orientation_default(p);
-    if (strcmp(option_name, CUPS_MEDIA) == 0)
-        return get_media_default(p);
+    // if (strcmp(option_name, CUPS_MEDIA) == 0)*/
+    //    return get_media_default(p);*/
 
     ensure_printer_connection(p);
     ipp_attribute_t *def_attr = cupsFindDestDefault(p->http, p->dest, p->dinfo, option_name);
